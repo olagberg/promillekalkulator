@@ -1,37 +1,46 @@
 <script>
-import {vekt, gender, forbrenning, timer} from "./stores";
+    import {vekt, gender, forbrenning, timer} from "./stores";
 </script>
 
 <div class="box">
     <h2>Personlige opplysninger:</h2>
+
+    <!-- Vekt number input -->
     <label>
         Vekt:
-        <input step=1 type="number" bind:value={$vekt}>
+        <input bind:value={$vekt} step=1 type="number">
     </label>
+
+    <!-- Drikkestart number input -->
     <label>
         Timer siden drikkestart:
-        <input type="number" step=1 bind:value={$timer}>
+        <input bind:value={$timer} step=1 type="number">
     </label>
+
+    <!-- Forbrenning number input -->
     <label>
         Forbrenning per time:
-    <input type="number" step=0.01 bind:value={$forbrenning}>
+        <input bind:value={$forbrenning} step=0.01 type="number">
     </label>
-    <!-- Gender-->
+
+    <!-- Gender radios -->
     <label>
-        <input type="radio" bind:group={$gender} value={0.7}>
+        <input bind:group={$gender} type="radio" value={0.7}>
         Mann
     </label>
     <label>
-        <input type="radio" bind:group={$gender} value={0.55}>
+        <input bind:group={$gender} type="radio" value={0.55}>
         Kvinne
     </label>
     <label>
-        <input type="radio" bind:group={$gender} value={0.65}>
+        <input bind:group={$gender} type="radio" value={0.65}>
         Non-binary
     </label>
+
+    <!-- Gender number input -->
     <label>
         Eller endre kroppsmasse selv:
-        <input type="number" bind:value={$gender}>
+        <input bind:value={$gender} type="number">
     </label>
 </div>
 
@@ -41,7 +50,7 @@ import {vekt, gender, forbrenning, timer} from "./stores";
         width: min-content;
         border: 5px solid gray;
         border-radius: 1em;
-        box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
         padding: 2em;
         margin: 2em;
     }

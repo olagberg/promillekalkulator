@@ -8,18 +8,21 @@
 </script>
 
 <div class="container">
-{#each $drinks as drink, i}
-<DrinkWidget drink={drink} index={i}/>
-{/each}
+    {#each $drinks as drink, i}
+        <DrinkWidget drink={drink} index={i}/>
+    {/each}
 </div>
+
 <div class="container">
     <NewDrinkInput/>
     <Person/>
 </div>
+
 <div class="container">
-<DinPromille/>
-<ConsoleLogAllStores/>
+    <DinPromille/>
+    <ConsoleLogAllStores/>
 </div>
+
 <style>
     .container {
         display: flex;
@@ -27,21 +30,6 @@
         justify-content: center;
     }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!--<label>
