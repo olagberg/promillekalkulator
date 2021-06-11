@@ -18,7 +18,7 @@
     <Person/>
 </div>
 
-<div class="container">
+<div class="container bottom">
     <DinPromille/>
     <ConsoleLogAllStores/>
 </div>
@@ -28,5 +28,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .bottom {
+        padding-bottom: 2em;
     }
 </style>
