@@ -2,18 +2,24 @@
     import {Drink} from "./Drink";
     import {drinks} from "./stores";
     let name = "Screwdriver";
+    let liter = 0.5;
     let prosent = 20;
     $: console.log("n: " + name)
     const newDrink = () => {
-        $drinks = [...$drinks, Drink(name, prosent, 0)];
+        $drinks = [...$drinks, Drink(name, prosent, liter)];
     };
     $: console.log("n: " + name + ", p: " + prosent)
 </script>
 
 <div class="box">
+    <h2>Ny drink:</h2>
     <label>
         Navn på drink
         <input bind:value={name}>
+    </label>
+    <label>
+        Liter:
+        <input type=number step=0.1 bind:value={liter}>
     </label>
     <label>
         Prosent

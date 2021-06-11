@@ -10,8 +10,10 @@
 <DrinkWidget drink={drink} index={i}/>
 {/each}
 </div>
+
 <NewDrinkInput drinks={drinks}/>
 <DinPromille/>
+
 <style>
     .container {
         display: flex;

@@ -2,11 +2,20 @@
     import {drinks} from "./stores";
     export let drink;
     export let index;
+
     const removeDrink = () => {
         let newArray = [...$drinks];
         newArray.splice(index, 1);
         drinks.set([...newArray]);
         console.log("Removed!")
+    }
+
+    // Oppdaterer arrayet for new render
+    const updateArray = () => {
+        if (drink !== undefined && drink !== null) {
+            const newArr = [...$drinks];
+            drinks.set([...newArr]);
+        }
     }
 </script>
 
@@ -18,11 +27,11 @@
     </div>
     <label>
         Liter:
-        <input type=number step=0.1 bind:value={drink.liter}>
+        <input type=number step=0.1 bind:value={drink.liter} on:input={updateArray}>
     </label>
     <label>
         Prosent:
-        <input type=number step=0.1 bind:value={drink.prosent}>
+        <input type=number step=0.1 bind:value={drink.prosent} on:input={updateArray}>
     </label>
 
         <button on:click={removeDrink}>Slett drink</button>

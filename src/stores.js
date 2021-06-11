@@ -3,8 +3,8 @@ import {Drink} from "./Drink";
 
 export const drinks = writable(
     [Drink('Brennevin', 100, 1),
-        Drink('Øl', 100, 1),
-        Drink('Vin', 100, 1)]);
+        Drink('Øl', 4.7, 0),
+        Drink('Vin', 12, 0)]);
 
 export const vekt = writable(70);
 export const gender = writable(0.70);
