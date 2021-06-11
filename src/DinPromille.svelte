@@ -20,13 +20,14 @@
         if (!$timer) return "Din promille etter 0 timer:"
         if ($timer === 1) return "Din promille etter 1 time:";
         else return "Din promille etter " + $timer + " timer:"
-    }
+    };
+    $: validPromille = ((promille !== Infinity) && (!isNaN(promille)));
     $: console.log("Promille: " + promille);
 </script>
 <div class="center">
 <p>{timerOutput()}</p>
 
-{#if promille !== Infinity}
+{#if validPromille}
     <h2>{promilleOutput()}</h2>
 {:else}
     <h2>Kan ikke kalkulere din promille. Sjekk om du har skrevet inn riktige verdier.</h2>

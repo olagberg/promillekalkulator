@@ -40,7 +40,7 @@
     <!-- Gender number input -->
     <label>
         Eller endre kroppsmasse selv:
-        <input bind:value={$gender} type="number">
+        <input bind:value={$gender} step=0.01 type="number">
     </label>
 </div>
 

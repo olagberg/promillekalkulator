@@ -23,8 +23,8 @@
     <div>
         <h3>Drikke</h3>
         <p>Navn: {drink.name}</p>
-        <p>{drink.liter} liter</p>
-        <p>{drink.prosent} prosent</p>
+        <p>{drink.liter ? drink.liter : 0} liter</p>
+        <p>{drink.prosent ? drink.prosent : 0} prosent</p>
     </div>
     <label>
         Liter:
