@@ -16,13 +16,15 @@
     <NewDrinkInput/>
     <Person/>
 </div>
-
+<div class="container">
 <DinPromille/>
 <ConsoleLogAllStores/>
+</div>
 <style>
     .container {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 </style>
 

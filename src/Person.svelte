@@ -6,15 +6,15 @@ import {vekt, gender, forbrenning, timer} from "./stores";
     <h2>Personlige opplysninger:</h2>
     <label>
         Vekt:
-        <input type="number" bind:value={$vekt}>
+        <input step=1 type="number" bind:value={$vekt}>
     </label>
     <label>
         Timer siden drikkestart:
-        <input bind:value={$timer}>
+        <input type="number" step=1 bind:value={$timer}>
     </label>
     <label>
         Forbrenning per time:
-    <input bind:value={$forbrenning}>
+    <input type="number" step=0.01 bind:value={$forbrenning}>
     </label>
     <!-- Gender-->
     <label>
