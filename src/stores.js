@@ -1,4 +1,4 @@
-import { writable} from 'svelte/store';
+import {writable} from 'svelte/store';
 import {Drink} from "./Drink";
 
 export const drinks = writable(

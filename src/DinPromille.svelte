@@ -1,6 +1,7 @@
 <script>
-    import {drinks, vekt, gender, forbrenning, timer} from "./stores";
+    import {drinks, forbrenning, gender, timer, vekt} from "./stores";
     import {gramAlkohol} from "./Drink";
+
     const reducer = (accumulator, currentValue) => accumulator + gramAlkohol(currentValue);
 
     $: gram = $drinks.reduce(reducer, 0);
@@ -25,14 +26,14 @@
     $: console.log("Promille: " + promille);
 </script>
 <div class="center">
-<p>{timerOutput()}</p>
+    <p>{timerOutput()}</p>
 
-{#if validPromille}
-    <h2>{promilleOutput()}</h2>
-{:else}
-    <h2>Kan ikke kalkulere din promille. Sjekk om du har skrevet inn riktige verdier.</h2>
-{/if}
-<p>{gram.toFixed(0)} gram alkohol, {(gram * 7).toFixed(0)} kcal i ren etanol</p>
+    {#if validPromille}
+        <h2>{promilleOutput()}</h2>
+    {:else}
+        <h2>Kan ikke kalkulere din promille. Sjekk om du har skrevet inn riktige verdier.</h2>
+    {/if}
+    <p>{gram.toFixed(0)} gram alkohol, {(gram * 7).toFixed(0)} kcal i ren etanol</p>
 
 </div>
 
@@ -40,6 +41,7 @@
     p {
         font-size: 1.2em;
     }
+
     .center {
         flex-wrap: nowrap;
         text-align: center;

@@ -1,5 +1,5 @@
 <script>
-    import {vekt, gender, forbrenning, timer} from "./stores";
+    import {forbrenning, gender, timer, vekt} from "./stores";
 </script>
 
 <div class="box">
@@ -20,7 +20,7 @@
     <!-- Forbrenning number input -->
     <label>
         Forbrenning per time:
-        <input bind:value={$forbrenning} step=0.01  min=0 max=1 type="number">
+        <input bind:value={$forbrenning} step=0.01 min=0 max=1 type="number">
     </label>
 
     <!-- Gender radios -->
