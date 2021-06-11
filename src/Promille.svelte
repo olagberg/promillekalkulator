@@ -1,20 +1,51 @@
 <script>
-    import {Drink} from "./Drink.js";
+    import {drinks} from "./stores";
     import DrinkWidget from "./DrinkWidget.svelte";
+    import NewDrinkInput from "./NewDrinkInput.svelte";
 
-    let drinks = [new Drink('Brennevin', 100, 1), new Drink('Øl', 100, 1), new Drink('Vin', 100, 1)];
     let vekt = 70;
     let gender = 0.7;
     let forbrenning = 0.18;
     let timer = 1;
-    $: gram = drinks.reduce((accumulator, currentValue) => {
-        return accumulator + currentValue.gram();
-    }, 0);
-    $: promille = (gram / (vekt * gender)) - (forbrenning * timer)
-    $: console.log(gram)
+    $: $drinks.forEach((drink) => {
+        console.log(drink)
+    })
+    //$: console.log("Inni første: " + drinks)
+    //    $: gram = drinks.reduce((accumulator, currentValue) => {
+    //        return accumulator + currentValue.gram();
+    //    }, 0);
+    //    $: promille = (gram / (vekt * gender)) - (forbrenning * timer)
+    //    $: console.log(gram)
 </script>
 
-<DrinkWidget drinks={drinks}/>
+<div class="container">
+{#each $drinks as drink}
+<DrinkWidget drink={drink}/>
+{/each}
+</div>
+<NewDrinkInput drinks={drinks}/>
+
+<style>
+    .container {
+        display: flex;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--<label>
     Vekt:

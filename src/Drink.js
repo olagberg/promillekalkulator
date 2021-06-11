@@ -1,11 +1,7 @@
-export class Drink {
-    constructor(navn, prosent, liter) {
-        this.navn = navn;
-        this.prosent = prosent;
-        this.liter = liter;
-    }
+export const Drink = (name, prosent, liter) => {
+        return {name, prosent, liter};
+}
 
-    gram() {
-        return this.liter * 10 * this.prosent * 0.8
-    }
+export function gram(drink) {
+        return drink.liter * 10 * drink.prosent * 0.8
 }

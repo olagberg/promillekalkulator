@@ -1,21 +1,13 @@
 <script>
-    import {Drink} from "./Drink.js";
-
-    export let drinks;
-    let navn = "";
-    let prosent = 0;
-
-    function newDrink() {
-        drinks.push(new Drink(navn, prosent, 0));
-        console.log(drinks)
+    export let drink;
+    const removeDrink = () => {
+        console.log("removed!")
     }
-    $: console.log("n: " + navn + ", p: " + prosent)
 </script>
 
-{#each drinks as drink}
     <div class="box">
     <div>
-        <p>Navn: {drink.navn}</p>
+        <p>Navn: {drink.name}</p>
         <p>{drink.liter} liter</p>
         <p>{drink.prosent} prosent</p>
     </div>
@@ -27,28 +19,18 @@
         Prosent:
         <input type=number step=0.1 bind:value={drink.prosent}>
     </label>
+
+        <button on:click={removeDrink}>Slett drink</button>
     </div>
-{/each}
-<div class="box">
-    <label>
-        Navn på drink
-        <input bind:value={navn}>
-    </label>
-    <label>
-        Prosent
-        <input type=number step=0.1 bind:value={prosent}>
-    </label>
-    <button on:click={newDrink}>Ny drink!</button>
-</div>
 
 <style>
     .box {
         box-sizing: border-box;
         width: min-content;
-        border: 1px solid red;
-        border-radius: 2px;
-        box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        border: 2px solid rgba(0,0,0,0.05);
+        border-radius: 1em;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
         padding: 1em;
-        margin: 0 0 1em 0;
+        margin: 1em;
     }
 </style>
