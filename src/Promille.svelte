@@ -2,32 +2,20 @@
     import {drinks} from "./stores";
     import DrinkWidget from "./DrinkWidget.svelte";
     import NewDrinkInput from "./NewDrinkInput.svelte";
-
-    let vekt = 70;
-    let gender = 0.7;
-    let forbrenning = 0.18;
-    let timer = 1;
-    $: $drinks.forEach((drink) => {
-        console.log(drink)
-    })
-    //$: console.log("Inni første: " + drinks)
-    //    $: gram = drinks.reduce((accumulator, currentValue) => {
-    //        return accumulator + currentValue.gram();
-    //    }, 0);
-    //    $: promille = (gram / (vekt * gender)) - (forbrenning * timer)
-    //    $: console.log(gram)
+    import DinPromille from "./DinPromille.svelte";
 </script>
 
 <div class="container">
-{#each $drinks as drink}
-<DrinkWidget drink={drink}/>
+{#each $drinks as drink, i}
+<DrinkWidget drink={drink} index={i}/>
 {/each}
 </div>
 <NewDrinkInput drinks={drinks}/>
-
+<DinPromille/>
 <style>
     .container {
         display: flex;
+        flex-wrap: wrap;
     }
 </style>
 

@@ -1,8 +1,8 @@
 <script>
     import {Drink} from "./Drink";
     import {drinks} from "./stores";
-    let name = "";
-    let prosent = 0;
+    let name = "Screwdriver";
+    let prosent = 20;
     $: console.log("n: " + name)
     const newDrink = () => {
         $drinks = [...$drinks, Drink(name, prosent, 0)];

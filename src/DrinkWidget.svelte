@@ -1,7 +1,12 @@
 <script>
+    import {drinks} from "./stores";
     export let drink;
+    export let index;
     const removeDrink = () => {
-        console.log("removed!")
+        let newArray = [...$drinks];
+        newArray.splice(index, 1);
+        drinks.set([...newArray]);
+        console.log("Removed!")
     }
 </script>
 
