@@ -12,19 +12,22 @@
 
 <div class="box">
     <h2>Ny drink:</h2>
-    <label>
-        Navn på drink
-        <input bind:value={name}>
-    </label>
-    <label>
-        Liter:
-        <input type=number step=0.1 min=0 bind:value={liter}>
-    </label>
-    <label>
-        Prosent
-        <input type=number step=0.1 min=0 bind:value={prosent}>
-    </label>
-    <button on:click={newDrink}>Ny drink!</button>
+    <div class="row">
+        <label for="name">Navn:</label>
+        <input id="name" bind:value={name}>
+    </div>
+
+    <div class="row">
+        <label for="liter">Liter:</label>
+        <input id="liter" type=number step=0.1 min=0 max=100 bind:value={liter}>
+    </div>
+
+    <div class="row">
+        <label for="prosent">Prosent:</label>
+        <input id="prosent" type=number step=0.1 min=0 max=100 bind:value={prosent}>
+    </div>
+
+    <button on:click={newDrink}>Legg til drink!</button>
 </div>
 
 <style>
@@ -36,5 +39,15 @@
         box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
         padding: 2em;
         margin: 2em;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    label {
+        padding-top: 0.3em;
+        margin-right: 0.4em;
     }
 </style>

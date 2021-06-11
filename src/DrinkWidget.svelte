@@ -41,7 +41,7 @@
     .box {
         box-sizing: border-box;
         width: min-content;
-        border: 2px solid rgba(0, 0, 0, 0.05);
+        border: 5px solid rgb(59, 174, 255);
         border-radius: 1em;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
         padding: 1em 4em 1em 4em;
@@ -54,7 +54,7 @@
     }
 
     input {
-        margin-right: 1em;
+        margin-right: 0.4em;
     }
 
     label {
