@@ -21,6 +21,7 @@
 
     <div class="box">
     <div>
+        <h3>Drikke</h3>
         <p>Navn: {drink.name}</p>
         <p>{drink.liter} liter</p>
         <p>{drink.prosent} prosent</p>

@@ -1,8 +1,8 @@
-import {readable, writable} from 'svelte/store';
+import { writable} from 'svelte/store';
 import {Drink} from "./Drink";
 
 export const drinks = writable(
-    [Drink('Brennevin', 100, 1),
+    [Drink('Brennevin', 40, 0),
         Drink('Øl', 4.7, 0),
         Drink('Vin', 12, 0)]);
 

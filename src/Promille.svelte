@@ -3,6 +3,8 @@
     import DrinkWidget from "./DrinkWidget.svelte";
     import NewDrinkInput from "./NewDrinkInput.svelte";
     import DinPromille from "./DinPromille.svelte";
+    import Person from "./Person.svelte";
+    import ConsoleLogAllStores from "./ConsoleLogAllStores.svelte";
 </script>
 
 <div class="container">
@@ -10,10 +12,13 @@
 <DrinkWidget drink={drink} index={i}/>
 {/each}
 </div>
+<div class="container">
+    <NewDrinkInput/>
+    <Person/>
+</div>
 
-<NewDrinkInput drinks={drinks}/>
 <DinPromille/>
-
+<ConsoleLogAllStores/>
 <style>
     .container {
         display: flex;

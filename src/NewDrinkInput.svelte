@@ -2,13 +2,12 @@
     import {Drink} from "./Drink";
     import {drinks} from "./stores";
     let name = "Screwdriver";
-    let liter = 0.5;
-    let prosent = 20;
-    $: console.log("n: " + name)
+    let liter = 0.2;
+    let prosent = 15;
+
     const newDrink = () => {
         $drinks = [...$drinks, Drink(name, prosent, liter)];
     };
-    $: console.log("n: " + name + ", p: " + prosent)
 </script>
 
 <div class="box">
@@ -32,8 +31,8 @@
     .box {
         box-sizing: border-box;
         width: min-content;
-        border: 5px solid red;
-        border-radius: 2px;
+        border: 5px solid gray;
+        border-radius: 1em;
         box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
         padding: 2em;
         margin: 2em;
