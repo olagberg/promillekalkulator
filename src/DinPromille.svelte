@@ -1,6 +1,7 @@
 <script>
     import {drinks, forbrenning, gender, timer, vekt} from "./stores";
     import {gramAlkohol} from "./Drink";
+    import SoberEstimate from "./SoberEstimate.svelte";
 
     const reducer = (accumulator, currentValue) => accumulator + gramAlkohol(currentValue);
 
@@ -34,7 +35,7 @@
         <h2>Kan ikke kalkulere din promille. Sjekk om du har skrevet inn riktige verdier.</h2>
     {/if}
     <p>{gram.toFixed(0)} gram alkohol, {(gram * 7).toFixed(0)} kcal i ren etanol</p>
-
+    <SoberEstimate promille={promille}/>
 </div>
 
 <style>
