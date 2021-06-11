@@ -8,19 +8,19 @@
     <!-- Vekt number input -->
     <label>
         Vekt:
-        <input bind:value={$vekt} step=1 type="number">
+        <input bind:value={$vekt} step=1 min=0 max=500 type="number">
     </label>
 
     <!-- Drikkestart number input -->
     <label>
         Timer siden drikkestart:
-        <input bind:value={$timer} step=1 type="number">
+        <input bind:value={$timer} step=1 min=0 type="number">
     </label>
 
     <!-- Forbrenning number input -->
     <label>
         Forbrenning per time:
-        <input bind:value={$forbrenning} step=0.01 type="number">
+        <input bind:value={$forbrenning} step=0.01  min=0 max=1 type="number">
     </label>
 
     <!-- Gender radios -->
@@ -40,7 +40,7 @@
     <!-- Gender number input -->
     <label>
         Eller endre kroppsmasse selv:
-        <input bind:value={$gender} step=0.01 type="number">
+        <input bind:value={$gender} step=0.01 min=0 max=1 type="number">
     </label>
 </div>
 

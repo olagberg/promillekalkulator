@@ -18,11 +18,11 @@
     </label>
     <label>
         Liter:
-        <input type=number step=0.1 bind:value={liter}>
+        <input type=number step=0.1 min=0 bind:value={liter}>
     </label>
     <label>
         Prosent
-        <input type=number step=0.1 bind:value={prosent}>
+        <input type=number step=0.1 min=0 bind:value={prosent}>
     </label>
     <button on:click={newDrink}>Ny drink!</button>
 </div>

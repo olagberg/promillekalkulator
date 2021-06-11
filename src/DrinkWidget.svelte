@@ -21,18 +21,18 @@
 
     <div class="box">
     <div>
-        <h3>Drikke</h3>
+        <h3>Drink</h3>
         <p>Navn: {drink.name}</p>
         <p>{drink.liter ? drink.liter : 0} liter</p>
         <p>{drink.prosent ? drink.prosent : 0} prosent</p>
     </div>
     <label>
         Liter:
-        <input type=number step=0.1 bind:value={drink.liter} on:input={updateArray}>
+        <input type=number step=0.1 min=0 bind:value={drink.liter} on:input={updateArray}>
     </label>
     <label>
         Prosent:
-        <input type=number step=0.1 bind:value={drink.prosent} on:input={updateArray}>
+        <input type=number step=0.1 min=0 max=100 bind:value={drink.prosent} on:input={updateArray}>
     </label>
 
         <button on:click={removeDrink}>Slett drink</button>
