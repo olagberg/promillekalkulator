@@ -3,13 +3,10 @@
 
     export let promille;
     $: tid = () => {
-        let temp = promille;
-        let i = 0;
-        while (temp > 0) {
-            temp -= $forbrenning;
-            i++;
-        }
-        return i;
+        let estimate = Math.floor(promille/$forbrenning);
+        console.log("Estimate: " + estimate);
+        if (estimate <= 0) return 0;
+        return estimate;
     }
     $: output = () => {
         if (tid() === 0) return "";
