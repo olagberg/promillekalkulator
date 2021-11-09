@@ -1,5 +1,5 @@
 <script>
-    import {forbrenning} from "./stores";
+    import {forbrenning} from "../scripts/stores";
 
     export let promille;
     $: tid = () => {

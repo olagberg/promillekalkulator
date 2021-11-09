@@ -1,6 +1,6 @@
 <script>
-    import {Drink} from "./Drink";
-    import {drinks} from "./stores";
+    import {Drink} from "../scripts/Drink";
+    import {drinks} from "../scripts/stores";
 
     let name = "Screwdriver";
     let liter = 0.2;

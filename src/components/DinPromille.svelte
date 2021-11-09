@@ -1,6 +1,6 @@
 <script>
-    import {drinks, forbrenning, gender, timer, vekt} from "./stores";
-    import {gramAlkohol} from "./Drink";
+    import {drinks, forbrenning, gender, timer, vekt} from "../scripts/stores";
+    import {gramAlkohol} from "../scripts/Drink";
     import SoberEstimate from "./SoberEstimate.svelte";
 
     const reducer = (accumulator, currentValue) => accumulator + gramAlkohol(currentValue);

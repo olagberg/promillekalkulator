@@ -1,6 +1,6 @@
 <script>
-    import Overskrift from "./Overskrift.svelte";
-    import Promille from "./Promille.svelte";
+    import Overskrift from "./components/Overskrift.svelte";
+    import Promille from "./components/Promille.svelte";
 </script>
 
 <main>

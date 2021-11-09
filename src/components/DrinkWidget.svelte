@@ -1,5 +1,5 @@
 <script>
-    import {drinks} from "./stores";
+    import {drinks} from "../scripts/stores";
 
     export let drink;
     export let index;

@@ -1,6 +1,6 @@
 <script>
 
-    import {forbrenning, gender, timer, vekt} from "./stores";
+    import {forbrenning, gender, timer, vekt} from "../scripts/stores";
 
     $: console.log("Vekt: " + $vekt);
     $: console.log("Gender: " + $gender);

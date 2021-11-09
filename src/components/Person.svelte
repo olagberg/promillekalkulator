@@ -1,5 +1,5 @@
 <script>
-    import {forbrenning, gender, timer, vekt} from "./stores";
+    import {forbrenning, gender, timer, vekt} from "../scripts/stores";
 </script>
 
 <div class="box">
